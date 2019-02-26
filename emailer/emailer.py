@@ -1,3 +1,5 @@
+import os 
+import json
 import time
 import pprint
 
@@ -9,11 +11,15 @@ from email.mime.text import MIMEText
 # for avoiding throttling the email server 
 import threading
 
+config_path = os.path.join(os.path.dirname(__file__), '..', 'config.json')
+with open(config_path, 'r') as f:
+    CONFIG = json.load(f)
+
 def get_emailer():
     return Emailer()
 
 class Emailer(object):
-    def __init__(self):
+    def __init__(self, host='gmail'):
         self._host_map = {
             'gmail': ('smtp.gmail.com', 587),
             'ntu': ('mail.ntu.edu.tw', 587)
@@ -27,8 +33,10 @@ class Emailer(object):
         self._rest_timer = 10
         self._rest_count = 10
         self._count = 0
+
+        self._connect(CONFIG['GOOGLE']['ACCOUNTS']['user'], CONFIG['GOOGLE']['ACCOUNTS']['password'], host)
     
-    def overwatch(self):
+    def _overwatch(self):
         """
         Sounds like a cool name for a monitoring function tbh
         """
@@ -56,7 +64,7 @@ class Emailer(object):
         # If someone knows the reason behind this behavior, please email b04901118@ntu.edu.tw
         print('Overwatch stopped.')
 
-    def connect(self, user, pwd, host):
+    def _connect(self, user, pwd, host):
         if isinstance(host, str):
             try:
                 host = self._host_map[host]
@@ -76,7 +84,7 @@ class Emailer(object):
         print('Connected to SMTP server\n')
 
         self.server = server 
-        overwatch = threading.Thread(target=self.overwatch, args=())
+        overwatch = threading.Thread(target=self._overwatch, args=())
         overwatch.daemon = True
         overwatch.start()
     
