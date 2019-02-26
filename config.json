@@ -1,0 +1,39 @@
+{
+    "EMAIL":{
+        "GMAIL":{
+            "user":"ntumlta2019",
+            "password":"ntumlta2019ntumlta2019"
+        }
+    },
+
+    "GOOGLE":{
+        "ACCOUNTS":{
+            "user":"ntumlta2019",
+            "password":"ntumlta2019ntumlta2019"
+        },
+        "SHEETS":{
+            "valid_students":{
+                "id":"1ehoODa5XANTyIgJm3eeGmMjeZQwAnkY5s8F2NaMVnw4",
+                "name":"valid_students",
+                "description":"修課名單"
+            },
+            "github_form_responses":{
+                "id":"1zHaYSdBznS4rgT4-Zyvg1kLx7Vkdzfso8AHhRpwwG3c",
+                "name":"Form Responses 1",
+                "description":"github表單"
+            }
+        }
+    },
+
+    "GITHUB":{
+        "user":"ntumlta2019",
+        "token":"f8ce8a76f618c126e3fee200326a05a594d31401",
+        "password":"2019mlta2019mlta"
+    },
+
+    "KAGGLE":{
+        "user":"ntumlta2019",
+        "password":"ntumlta2019ntumlta2019",
+        "email":"ntumlta2019@gmail.com"
+    }
+}
