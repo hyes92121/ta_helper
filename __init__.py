@@ -1,5 +1,6 @@
 
 __all__ = [
     'sheets',
-    'cloner'
+    'cloner',
+    'emailer'
 ]
