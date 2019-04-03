@@ -15,11 +15,11 @@ config_path = os.path.join(os.path.dirname(__file__), '..', 'config.json')
 with open(config_path, 'r') as f:
     CONFIG = json.load(f)
 
-def get_emailer():
-    return Emailer()
+def get_emailer(host='gmail'):
+    return Emailer(host)
 
 class Emailer(object):
-    def __init__(self, host='gmail'):
+    def __init__(self, host):
         self._host_map = {
             'gmail': ('smtp.gmail.com', 587),
             'ntu': ('mail.ntu.edu.tw', 587)

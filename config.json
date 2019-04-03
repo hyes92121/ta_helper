@@ -12,14 +12,19 @@
             "password":"ntumlta2019ntumlta2019"
         },
         "SHEETS":{
-            "valid_students":{
-                "id":"1ehoODa5XANTyIgJm3eeGmMjeZQwAnkY5s8F2NaMVnw4",
-                "name":"valid_students",
+            "ceiba_students":{
+                "id":"1I5CcjlTYDEggFaKlIdPOw_W_TLrH-JOz8_ffn8pv3MM",
+                "name":"ceiba_students",
                 "description":"修課名單"
             },
             "github_form_responses":{
                 "id":"1zHaYSdBznS4rgT4-Zyvg1kLx7Vkdzfso8AHhRpwwG3c",
                 "name":"Form Responses 1",
+                "description":"github表單"
+            },
+            "valid_students":{
+                "id":"1za134mnPat-W4VxLnaNbTm-TPqaAXMWE6S1tQQkK9dM",
+                "name":"valid_students",
                 "description":"github表單"
             }
         }
@@ -27,7 +32,7 @@
 
     "GITHUB":{
         "user":"ntumlta2019",
-        "token":"f8ce8a76f618c126e3fee200326a05a594d31401",
+        "token":"a4ee67b33d021be76757ab078a45bbf7bec5eff0",
         "password":"2019mlta2019mlta"
     },
 
