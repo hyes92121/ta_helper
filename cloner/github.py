@@ -40,14 +40,14 @@ def get_users(filter=''):
     return users
 
 # clone a specific folder in a github repo
-def clone_folder(user, folder, output_dir):
+def clone_folder(user, semester, hw, output_dir):
     user_ta = CONFIG['GITHUB']['user']
     token_ta = CONFIG['GITHUB']['token']
 
-    url = f'https://{user_ta}:{token_ta}@github.com/{user}/{folder}'
+    url = f'https://{user_ta}:{token_ta}@github.com/{user}/{semester}'
     script_path = os.path.join(os.path.dirname(__file__), 'git-pull.sh')
 
-    subprocess.call(('sh', script_path, user, url, output_dir))
+    subprocess.call(('sh', script_path, user, url, hw, output_dir))
     
     
     
