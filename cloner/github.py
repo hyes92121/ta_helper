@@ -47,7 +47,7 @@ def clone_folder(user, folder, output_dir):
     url = f'https://{user_ta}:{token_ta}@github.com/{user}/{folder}'
     script_path = os.path.join(os.path.dirname(__file__), 'git-pull.sh')
 
-    subprocess.call(('sh', script_path, user, url, folder))
+    subprocess.call(('sh', script_path, user, url, output_dir))
     
     
     
