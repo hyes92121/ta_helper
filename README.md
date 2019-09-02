@@ -19,3 +19,6 @@ All files importing this module should be placed in the same directory as the *t
 - At the upper right section of the page, select *Generate new token*
 - Select *repo*, under the *Select scopes* section and press *Generate token*
 - Copy the token to `ta_helper/config.json`
+
+#### Run the code
+Change the parameters inside *clone.py* and enter `python clone.py` to run the code
